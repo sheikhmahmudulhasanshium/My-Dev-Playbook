@@ -34,15 +34,15 @@ A lightweight yet powerful script to find all files of a specific type (e.g., `.
 
 ---
 
-### ▶️ Play #2: The Advanced File Merger
+### ▶️ Play #2: The Secure Advanced File Merger
 
-An intelligent, interactive script that analyzes a project directory and guides you through merging only the files you need. It's perfect for creating a comprehensive "context dump" for AI models, project archiving, or code reviews.
+An intelligent, location-independent script that can be run from anywhere. It asks for your project path, analyzes its structure, and guides you through a secure merge process. It's the perfect tool for creating a comprehensive and safe "context dump" for AI models, project archiving, or code reviews.
 
 #### ✨ Key Features:
--   **📊 Project Analysis:** Starts with a summary of file types and the heaviest folders.
--   **🤖 Smart Filtering:** Interactively suggests ignoring common folders like `node_modules` and automatically respects rules from your `.gitignore` file.
--   **🎯 User-Controlled Selection:** You have the final say on which file extensions to include.
--   **📄 Formatted Markdown Output:** Creates a clean, human-readable `.md` file that can easily be converted to PDF or DOCX.
+-   **📍 Location-Independent:** No need to `cd` into your project directory. The script asks for the path, making it less error-prone.
+-   **🔒 Sanitizes `.env` Files:** Automatically detects `.env` files and replaces secret values with placeholders (e.g., `[24-character value]`) to prevent leaking sensitive data.
+-   **🤖 Robust Filtering:** Interactively suggests ignoring common folders and files, and can automatically apply rules from your `.gitignore`.
+-   **✨ Enhanced UI:** Provides a visual spinner during analysis and a progress bar during merging for a professional user experience.
 
 #### 📁 File:
 -   **PowerShell Version:** [`merge_files_advanced.ps1`](./plays/02-file-merger-advanced/merge_files_advanced.ps1)
@@ -50,7 +50,7 @@ An intelligent, interactive script that analyzes a project directory and guides 
 #### 📝 A Note on Tooling:
 > **Why is there no `.bat` version for this play?**
 >
-> The advanced features of this script—such as interactive prompts, file system analysis, and parsing `.gitignore` files—rely heavily on capabilities that are native to PowerShell. Creating an equivalent in a traditional Batch file would be extremely complex, slow, and unreliable. This is a great example of choosing the right tool for the job, and for this task, PowerShell is the clear and superior choice.
+> The advanced features of this script—such as its interactive UI, robust filtering, and file sanitization—rely heavily on capabilities native to PowerShell. Creating an equivalent in a traditional Batch file would be extremely complex, slow, and unreliable. This is a great example of choosing the right tool for the job.
 
 ---
 
@@ -95,17 +95,18 @@ Solves the biggest problem when working with AI: context window limits. This int
 
 ## ⚙️ How to Use The Plays
 
-Each script is designed to be run from the root of the project you are working on.
+The advanced plays (**#2, #3, #4**) are location-independent and will ask for your project path. The simple play (**#1**) should be run from within your project folder.
 
-### Option A: PowerShell (Recommended for all plays)
-1.  Copy the desired `.ps1` script from this playbook into the root directory of your target project.
+### For Advanced Plays (Recommended):
+1.  Open PowerShell anywhere.
+2.  Navigate to the folder where you have saved the script (e.g., `.../My-Dev-Playbook/plays/02-file-merger-advanced/`).
+3.  Execute the script by typing its name (e.g., `.\merge_files_advanced.ps1`) and pressing **Enter**.
+4.  Follow the on-screen prompts to provide your project path and other settings.
+
+### For Simple Plays (like Play #1):
+1.  Copy the desired script file into the root directory of your target project.
 2.  In your project's folder, hold down `Shift` + `Right-Click` on an empty space and select **"Open PowerShell window here"**.
-3.  Execute the script by typing its name (e.g., `.\file_chunker.ps1`) and pressing **Enter**.
-4.  Follow any on-screen instructions.
-
-### Option B: Windows Batch File (For simple plays like Play #1)
-1.  Copy the desired `.bat` file (e.g., `merge_files.bat`) into the root directory of your target project.
-2.  Double-click the `.bat` file to execute it.
+3.  Execute the script by typing its name (e.g., `.\merge_files.ps1`) and pressing **Enter**.
 
 ---
 
