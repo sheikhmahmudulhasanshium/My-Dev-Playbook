@@ -18,7 +18,7 @@ The goal is not to reinvent the wheel, but to have a reliable, go-to resource of
 
 Here are the currently available "plays" in the playbook. Each one is designed to solve a specific problem.
 
-### ▶️ Play #1: The File Merger
+### ▶️ Play #1: The Simple File Merger
 
 A lightweight yet powerful script to find all files of a specific type (e.g., `.ts`, `.js`, `.css`) within a directory and its subdirectories, and combine them into a single output file.
 
@@ -34,21 +34,40 @@ A lightweight yet powerful script to find all files of a specific type (e.g., `.
 
 ---
 
-## ⚙️ How to Use a Play
+### ▶️ Play #2: The Advanced File Merger
+
+An intelligent, interactive script that analyzes a project directory and guides you through merging only the files you need. It's perfect for creating a comprehensive "context dump" for AI models, project archiving, or code reviews.
+
+#### ✨ Key Features:
+-   **📊 Project Analysis:** Starts with a summary of file types and the heaviest folders.
+-   **🤖 Smart Filtering:** Interactively suggests ignoring common folders like `node_modules` and automatically respects rules from your `.gitignore` file.
+-   **🎯 User-Controlled Selection:** You have the final say on which file extensions to include.
+-   **📄 Formatted Markdown Output:** Creates a clean, human-readable `.md` file that can easily be converted to PDF or DOCX.
+
+#### 📁 File:
+-   **PowerShell Version:** [`merge_files_advanced.ps1`](./plays/02-file-merger-advanced/merge_files_advanced.ps1)
+
+#### 📝 A Note on Tooling:
+> **Why is there no `.bat` version for this play?**
+>
+> The advanced features of this script—such as interactive prompts, file system analysis, and parsing `.gitignore` files—rely heavily on capabilities that are native to PowerShell. Creating an equivalent in a traditional Batch file would be extremely complex, slow, and unreliable. This is a great example of choosing the right tool for the job, and for this task, PowerShell is the clear and superior choice.
+
+---
+
+## ⚙️ How to Use The Plays
 
 Each script is self-contained and ready to use.
 
-### Option A:  PowerShell (Recommended)
-1.  Open the project folder where you want to run the script in File Explorer.
+### Option A: PowerShell (Recommended for all plays)
+1.  Navigate to the directory of the play you wish to use (e.g., `./plays/02-file-merger-advanced/`).
 2.  Hold down `Shift` + `Right-Click` on an empty space and select **"Open PowerShell window here"**.
-3.  Copy the contents of the desired `.ps1` script (e.g., `merge_files.ps1`).
-4.  Paste the script into the PowerShell window and press **Enter**.
-5.  The script will execute and create the specified output file.
+3.  Execute the script by typing its name and pressing Enter. For example: `.\merge_files_advanced.ps1`
+4.  Follow any on-screen instructions.
 
-### Option B: Windows Batch File
+### Option B: Windows Batch File (For simple plays like Play #1)
 1.  Copy the desired `.bat` file (e.g., `merge_files.bat`) into the project folder you want to run it in.
 2.  Double-click the `.bat` file to execute it.
-3.  A command window will open, run the script, and close automatically. The specified output file will be created.
+3.  A command window will open, run the script, and close automatically.
 
 ---
 
