@@ -93,14 +93,30 @@ Solves the biggest problem when working with AI: context window limits. This int
 
 ---
 
+### ▶️ Play #5: The Intelligent Project Mapper
+
+A powerful utility that goes beyond a simple `tree` command to generate insightful, visually appealing, and documentation-ready maps of any project's architecture. It intelligently summarizes folder contents and filters out noise, giving you a high-level understanding of any codebase at a glance.
+
+#### ✨ Key Features:
+-   **🧠 Intelligent Summaries:** Can automatically detect and summarize folder contents based on keywords, such as `auth/ (2 services, 1 module)`.
+-   **⚙️ Granular Filtering & Control:** Choose from multiple intensity levels (overview, intelligent, or complete), filter by file extension, interactively confirm ignore lists, and limit the map depth to tame massive projects.
+-   **🌐 Modern Framework Aware:** Built with real-world projects in mind. It knows to ignore heavy directories like `node_modules`, `.next`, `.git`, and `build` by default, ensuring a clean and relevant map.
+-   **📝 Self-Documenting Output:** Every saved map file automatically includes a concise execution log, capturing all user choices, filters, and paths used to generate it. This creates a perfect, transparent artifact for documentation or team sharing.
+-   **💾 Safe & Universal:** Asks for your project path so it can be run from anywhere. It provides a safe overwrite prompt and saves files in UTF-8 to ensure all tree characters and emojis render perfectly.
+
+#### 📁 File:
+-   **PowerShell Version:** [`project_mapper.ps1`](./plays/05-intelligent-project-mapper/project_mapper.ps1)
+
+---
+
 ## ⚙️ How to Use The Plays
 
-The advanced plays (**#2, #3, #4**) are location-independent and will ask for your project path. The simple play (**#1**) should be run from within your project folder.
+The advanced plays (**#2, #3, #4, #5**) are location-independent and will ask for your project path. The simple play (**#1**) should be run from within your project folder.
 
 ### For Advanced Plays (Recommended):
 1.  Open PowerShell anywhere.
-2.  Navigate to the folder where you have saved the script (e.g., `.../My-Dev-Playbook/plays/02-file-merger-advanced/`).
-3.  Execute the script by typing its name (e.g., `.\merge_files_advanced.ps1`) and pressing **Enter**.
+2.  Navigate to the folder where you have saved the script (e.g., `.../My-Dev-Playbook/plays/05-intelligent-project-mapper/`).
+3.  Execute the script by typing its name (e.g., `.\project_mapper.ps1`) and pressing **Enter**.
 4.  Follow the on-screen prompts to provide your project path and other settings.
 
 ### For Simple Plays (like Play #1):
