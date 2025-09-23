@@ -109,22 +109,38 @@ A powerful utility that goes beyond a simple `tree` command to generate insightf
 
 ---
 
-## ⚙️ How to Use The Plays
+### ▶️ Play #6: The Phoenix Setup (Role-Based & Hardware-Aware)
 
-The advanced plays (**#2, #3, #4, #5**) are location-independent and will ask for your project path. The simple play (**#1**) should be run from within your project folder.
+Starting fresh on a new PC can be a drag. This script is your personal phoenix, raising your development environment from the ashes. It's an interactive, hardware-aware utility that checks your system's RAM and lets you install role-based profiles (**Frontend**, **Backend**, **Full-Stack**) or install tools individually from categorized lists.
 
-### For Advanced Plays (Recommended):
-1.  Open PowerShell anywhere.
-2.  Navigate to the folder where you have saved the script (e.g., `.../My-Dev-Playbook/plays/05-intelligent-project-mapper/`).
-3.  Execute the script by typing its name (e.g., `.\project_mapper.ps1`) and pressing **Enter**.
-4.  Follow the on-screen prompts to provide your project path and other settings.
+#### ✨ Key Features:
+-   **🚀 Role-Based Profiles:** Choose a profile like **Frontend** (Git, VS Code, Node) or **Backend** (Git, Node, Docker, Postman) to get a curated toolset for your specific job.
+-   **💡 Hardware-Aware:** Automatically detects your system's RAM and provides clear performance warnings before installing heavy applications like **Docker** and **Visual Studio**.
+-   **✔️ Categorized & Optional Tools:** The menu is now grouped into "Core Tools," "Heavy IDEs & Containers," and "API Tools," making it easy to install just what you need.
+-   **🔒 Effortless Admin Elevation:** Simply double-click the `run_setup.bat` launcher to automatically request administrator privileges. No more manual steps.
+-   **📝 Failsafe Logging:** Creates a detailed `setup-log.txt` in your Documents folder if any installation fails.
 
-### For Simple Plays (like Play #1):
-1.  Copy the desired script file into the root directory of your target project.
-2.  In your project's folder, hold down `Shift` + `Right-Click` on an empty space and select **"Open PowerShell window here"**.
-3.  Execute the script by typing its name (e.g., `.\merge_files.ps1`) and pressing **Enter**.
+#### 📁 Files:
+-   **Launcher:** [`run_setup.bat`](./plays/06-new-machine-initializer/run_setup.bat) *(Use this to start the script)*
+-   **PowerShell Script:** [`phoenix_setup.ps1`](./plays/06-new-machine-initializer/phoenix_setup.ps1)
+
+#### 🚀 How to Use This Play:
+1.  Place both `run_setup.bat` and `phoenix_setup.ps1` in the same folder.
+2.  **Double-click `run_setup.bat`**.
+3.  When the UAC prompt appears, click **"Yes"** to grant administrator permissions.
+4.  The PowerShell script will now open and guide you through the setup menu.
 
 ---
+
+## ⚙️ How to Use The Plays
+
+Each play is designed to be as straightforward as possible.
+
+1.  Navigate to the directory of the play you want to use (e.g., `.../My-Dev-Playbook/plays/05-intelligent-project-mapper/`).
+2.  Look for the primary execution file:
+    -   If there is a **`.bat` launcher** (like `run_setup.bat`), **double-click it**. This is the easiest method.
+    -   If there is only a **`.ps1` file**, open a PowerShell terminal in that folder and run it by typing its name (e.g., `.\project_mapper.ps1`).
+3.  Follow the on-screen prompts. Most scripts are interactive and will guide you through the process.
 
 ## 🚀 Future Vision
 
