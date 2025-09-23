@@ -130,6 +130,28 @@ Starting fresh on a new PC can be a drag. This script is your personal phoenix, 
 3.  When the UAC prompt appears, click **"Yes"** to grant administrator permissions.
 4.  The PowerShell script will now open and guide you through the setup menu.
 
+### ▶️ Play #7: The .env Key Architect
+
+Tired of thinking up secure, random passwords for your `.env` files? This play is your dedicated cryptographer, designed to quickly generate multiple, high-entropy secrets, perfectly formatted for your project's configuration.
+
+#### ✨ Key Features:
+-   **🔐 Complexity Presets:** Choose from simple presets like **Easy** (12 chars), **Strong** (24 chars), or **Insane** (48 chars) for one-click security.
+-   **✍️ Fully Customizable:** Need something specific? The **Custom** mode lets you define the exact length and character types (numbers, special symbols) you need.
+-   **📦 Batch Generation:** Generate as many secrets as you need in a single session—perfect for scaffolding a new project's `.env` file from scratch.
+-   **📝 `.env` Ready:** Automatically formats each secret as a `VARIABLE_NAME=key...` pair, ready to be copied or saved directly.
+-   **💾 Safe Append:** When saving, it safely **appends** your new keys to the specified file (e.g., `.env`), so you never accidentally overwrite existing secrets.
+
+#### 📁 File:
+-   **PowerShell Version:** [`env_key_architect.ps1`](./plays/07-env-key-architect/env_key_architect.ps1)
+
+#### 🚀 How to Use This Play:
+1.  Run the `env_key_architect.ps1` script.
+2.  It will ask how many secret keys you need to generate.
+3.  For each key, you will:
+    a.  Provide a name (e.g., `DATABASE_PASSWORD`, `JWT_SECRET`).
+    b.  Choose a complexity preset or define a custom one.
+4.  After all keys are generated, they will be displayed on the screen.
+5.  Finally, you'll be asked if you want to append them to a file.
 ---
 
 ## ⚙️ How to Use The Plays
