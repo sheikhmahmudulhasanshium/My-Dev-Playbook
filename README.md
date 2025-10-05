@@ -24,6 +24,7 @@ The goal is not to reinvent the wheel, but to have a reliable, go-to resource of
 -   [**Play #6: The Phoenix Setup**](#️-play-6-the-phoenix-setup-role-based--hardware-aware)
 -   [**Play #7: The .env Key Architect**](#️-play-7-the-env-key-architect)
 -   [**Play #8: The AI Prompt Architect**](#️-play-8-the-ai-prompt-architect)
+-   [**Play #9: Git Guardian**](#️-play-9-git-guardian)
 
 ---
 
@@ -271,6 +272,39 @@ Stop getting generic answers from your AI. This script acts as your personal pro
 
 #### 🚀 How to Use This Play:
 -   Double-click `ai_prompt_architect.bat` for an easy start, or run `.\ai_prompt_architect.ps1` from PowerShell.
+
+---
+
+### ▶️ Play #9: Git Guardian
+
+Your interactive command-line partner for simplifying complex Git workflows, from initializing a new project to debugging errors with AI assistance.
+
+<details>
+<summary>💡 <b>When would I use this?</b></summary>
+<br>
+<ul>
+<li>Setting up Git and GitHub authentication for the first time on a new machine.</li>
+<li>Creating a new local project and pushing it to a new GitHub repository in one seamless operation.</li>
+<li>Performing daily Git tasks like pulling, branching, and pushing changes without having to remember all the specific commands.</li>
+<li>Quickly getting help with a confusing Git error by generating a perfectly formatted prompt for an AI.</li>
+<li>Safely resetting a local repository to a clean state after a major mistake, without accidentally deleting the wrong folder.</li>
+</ul>
+</details>
+
+#### ✨ Key Features:
+-   ** interactivo Menu-Driven UI:** Guides you through common Git tasks with a simple numerical menu, eliminating the need to memorize commands.
+-   **Automated Setup & Auth:** Checks and configures your Git identity and GitHub CLI authentication, perfect for first-time setup.
+-   **End-to-End Workflows:** Covers the entire repository lifecycle, from initialization and cloning to daily management and even "nuking" a local repo safely.
+-   **Built-in 'Git Doctor':** Generates a comprehensive, context-aware prompt to help you debug Git errors using any AI chat model.
+-   **Safety First:** Includes multiple confirmation steps for destructive actions like the 'Nuke' feature to prevent mistakes.
+-   **Dual-Version Support:** Provides both a simple Batch file for easy launching and a more powerful PowerShell version for an enhanced experience.
+
+#### 📁 Files:
+-   **PowerShell Version:** [`git_guardian.ps1`](./plays/09-git-guardian/git_guardian.ps1)
+-   **Batch File Version:** [`git_guardian.bat`](./plays/09-git-guardian/git_guardian.bat)
+
+#### 🚀 How to Use This Play:
+-   Use the combined script file that works for your preferred terminal (Batch or PowerShell). Run it from inside the project directory you want to manage.
 
 ---
 
